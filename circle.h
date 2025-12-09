@@ -6,7 +6,7 @@ class circle
 private:
     float posX = 600;
     float posY = 200;
-    float speed = -25;
+    float speed = 25;
 
 public:
     circle();
@@ -30,6 +30,10 @@ public:
     void setY(float y)
     {
         posY = y;
+    }
+    int getSpeed()
+    {
+        return speed;
     }
 };
 
