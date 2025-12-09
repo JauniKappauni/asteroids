@@ -34,6 +34,7 @@ int main()
         DrawRectangle(posX, posY, 20, 20, WHITE);
         circle1.spawn();
         circle1.setX(circle1.getPosX() - speed * dt);
+        circle1.setY(circle1.getPosY() - speed * dt);
         EndDrawing();
     }
     CloseWindow();
