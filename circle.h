@@ -7,13 +7,14 @@ private:
     float posX = 600;
     float posY = 200;
     float speed = 25;
+    float radius = 50;
 
 public:
     circle();
     ~circle();
     void spawn()
     {
-        DrawCircle(posX, posY, 50, WHITE);
+        DrawCircle(posX, posY, radius, WHITE);
     }
     float getPosX()
     {
@@ -39,6 +40,9 @@ public:
     {
         posX = 600;
         posY = 200;
+    }
+    float getRadius(){
+        return radius;
     }
 };
 

@@ -35,6 +35,12 @@ int main()
         {
             circle1.reset();
         }
+        Vector2 object = {circle1.getPosX(), circle1.getPosY()};
+        Rectangle player = {posX, posY, 20, 20};
+        if (CheckCollisionCircleRec(object, circle1.getRadius(), player))
+        {
+            circle1.reset();
+        }
         DrawRectangle(posX, posY, 20, 20, WHITE);
         circle1.spawn();
         circle1.setX(circle1.getPosX() - circle1.getSpeed() * dt);
