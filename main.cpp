@@ -1,7 +1,9 @@
 #include <raylib.h>
+#include "circle.h"
 
 int main()
 {
+    circle circle1;
     int screenWidth = 800;
     int screenHeight = 400;
     InitWindow(screenWidth, screenHeight, "Asteroids");
@@ -30,6 +32,8 @@ int main()
             posY += speed * dt;
         }
         DrawRectangle(posX, posY, 20, 20, WHITE);
+        circle1.spawn();
+        circle1.setX(circle1.getPosX() - speed * dt);
         EndDrawing();
     }
     CloseWindow();
