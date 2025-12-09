@@ -31,6 +31,10 @@ int main()
         {
             posY += speed * dt;
         }
+        if (circle1.getPosY() < 0)
+        {
+            circle1.reset();
+        }
         DrawRectangle(posX, posY, 20, 20, WHITE);
         circle1.spawn();
         circle1.setX(circle1.getPosX() - circle1.getSpeed() * dt);

@@ -35,6 +35,11 @@ public:
     {
         return speed;
     }
+    void reset()
+    {
+        posX = 600;
+        posY = 200;
+    }
 };
 
 circle::circle()
